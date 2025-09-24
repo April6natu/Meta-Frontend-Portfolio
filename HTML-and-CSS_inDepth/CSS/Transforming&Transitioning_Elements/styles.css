@@ -1,0 +1,42 @@
+/* Properties for other selectors */
+* {
+	padding: 0;
+	margin: 0;
+	color: pink;
+}
+  
+.container {
+	min-height: 100vh;
+	background-color:bisque;
+}
+  
+.letters {
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	text-transform:uppercase;
+	font-size: 60px;
+}
+
+/* Step 1-7: Style all <p> elements inside .letters */
+.letters p {
+  text-align: center;
+  background-color: rgb(250, 150, 100);
+  width: 70px;
+  margin-right: 1.5px;
+  border-radius: 15%;
+  border-color: rgb(250, 125, 75);
+  border-style: solid;
+}
+
+/* Step 8-9: Even <p> children rotate on Y-axis on hover of .letters */
+.letters:hover p:nth-child(even) {
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+/* Step 10-11: Odd <p> children rotate on X-axis on hover of .letters */
+.letters:hover p:nth-child(odd) {
+    transform: rotateX(360deg); /* Step 10 */
+    transition: 1.5s; /* Step 11 */
+}
